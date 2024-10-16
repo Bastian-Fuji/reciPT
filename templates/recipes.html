@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>レシピ一覧</title>
-  </head>
-  <body>
-    <ul>
+<head>
+  <meta charset="UTF-8">
+  <title>レシピ一覧</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>レシピ一覧</h1>
+    <ul class="recipe-list">
       {% for recipe in recipes %}
-      <li>
+      <li class="recipe-item">
         <a href="{{ recipe.url }}" target="_blank">{{ recipe.title }}</a><br />
-        <img src="{{ recipe.image }}" alt="{{ recipe.title }}" />
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="recipe-image" />
       </li>
       {% endfor %}
     </ul>
-  </body>
+  </div>
+</body>
 </html>

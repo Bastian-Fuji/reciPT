@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>画像アップロード</title>
-  </head>
-  <body>
-    <h1>画像をアップロードしてください</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>画像アップロード</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>食材の画像をアップロードしてください</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" />
-      <input type="submit" />
+      <input type="file" name="file" class="file-input" />
+      <input type="submit" value="アップロード" class="submit-button" />
     </form>
-  </body>
+  </div>
+</body>
 </html>
