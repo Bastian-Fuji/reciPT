@@ -1,5 +1,11 @@
 .DS_Store
 .vscode
 #config.py
-__pycache__
 test-recipes.html
+venv/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+static/
+node_modules/
